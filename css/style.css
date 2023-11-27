@@ -1,16 +1,25 @@
-*{
-  box-sizing: border-box;
-}
-
-*:focus{
-  outline: 2px dotted #7297EF;
-  outline-offset: 3px;
+:root{
+  --accent-color: #7297EF;
 }
 
 html{
+  box-sizing: border-box;
   height: 100%;
   scroll-behavior: smooth;
 }
+
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+*:focus{
+  outline: 2px dotted var(--accent-color);
+  outline-offset: 3px;
+}
+
 
 body{
   display: flex;
@@ -464,7 +473,7 @@ body{
 }
 
 .site-footer {
-  background-color: #7297EF;
+  background-color: var(--accent-color);
   color: #fff;
   padding: 40px 0;
 }
@@ -653,8 +662,6 @@ body{
   padding: 0;
   margin: 0;
   list-style: none;
-}
-.contact-page-item {
 }
 
 .contact-page-item:not(:last-child){
